@@ -6,22 +6,18 @@
 using namespace std;
 
 template <typename Type>
-inline Type max(Type t1, Type t2)
-{
-    return t1 > t2 ? t1 : t2;
-}
+inline Type max( Type t1, Type t2 )
+       { return t1 > t2 ? t1 : t2; }
 
 template <typename elemType>
-inline elemType max(const vector<elemType> &vec)
-{
-    return *max_element(vec.begin(), vec.end());
-}
+inline elemType max( const vector<elemType> &vec )
+       { return *max_element( vec.begin(), vec.end() ); }
 
 template <typename arrayType>
-inline arrayType max(const arrayType *parray, int size)
-{
-    return *max_element(parray, parray+size);
-}
+inline arrayType max( const arrayType *parray, int size )
+       { return *max_element( parray, parray+size ); }
+
+
 
 int main() 
 {
@@ -34,11 +30,17 @@ int main()
     float farray[]={ 2.5, 24.8, 18.7, 4.1, 23.9 };
     vector<float> fvec( farray, farray+5 );
 
-    int imax = max( max( ivec ), max( iarray, 7 ));
-    float fmax = max( max( fvec ), max( farray, 5 ));
-    string smax = max( max( svec ), max( sarray, 6 ));
+    int imax = max( ivec );
+    int imax1 = max( iarray, 7 );
+    float fmax = max( fvec );
+    float fmax1 = max( farray, 5 );
+    string smax = max( svec );
+    string smax1 = max( sarray, 6 );
 
 	cout << "imax should be 169  -- found: " << imax << "\n"
+        << "imax1 should be 169  -- found: " << imax1 << "\n"
 	     << "fmax should be 24.8 -- found: " << fmax << "\n"
-		 << "smax should be were -- found: " << smax << "\n";
+         << "fmax1 should be 24.8 -- found: " << fmax1 << "\n"
+		 << "smax should be were -- found: " << smax << "\n"
+         << "smax1 should be were -- found: " << smax1 << "\n";
 }
