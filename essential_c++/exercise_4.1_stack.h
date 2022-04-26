@@ -1,3 +1,6 @@
+#ifndef STACK_H
+#define STACK_H
+
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -67,3 +70,5 @@ Stack::count( const string &elem ) const
 {
 	return std::count( _stack.begin(), _stack.end(), elem );
 }
+
+#endif
