@@ -3,3 +3,4 @@
 *.tab.c
 *.out
 *~
+_build
