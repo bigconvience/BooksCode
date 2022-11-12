@@ -4,3 +4,5 @@
 *.out
 *~
 _build
+.vscode/
+*.s
