@@ -29,7 +29,6 @@
 #include <system_error>
 #include <utility>
 #include <vector>
-#include <optional>
 
 using namespace llvm;
 using namespace llvm::sys;
@@ -1245,7 +1244,7 @@ int main() {
   auto Features = "";
 
   TargetOptions opt;
-  auto RM = std::optional<Reloc::Model>();
+  auto RM = llvm::Optional<Reloc::Model>();
   auto TheTargetMachine =
       Target->createTargetMachine(TargetTriple, CPU, Features, opt, RM);
 
